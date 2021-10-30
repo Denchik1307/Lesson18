@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     private fun openFragment(fragment: Fragment) {
         supportFragmentManager
             .beginTransaction()
-            .addToBackStack(fragment.tag)
+//            .addToBackStack(fragment.tag)
             .replace(R.id.fvFragmentConteiner, fragment)
             .commit()
     }
