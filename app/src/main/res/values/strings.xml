@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lesson 18</string>
+    <string name="button_change_fragment">click me</string>
+    <string name="main_fragment_text">FRAGMENT</string>
+    <string name="main_tool_bar">Fragment 1</string>
+    <string name="main_tool_bar2">Fragment 2</string>
+    <string name="main_tool_bar3">Fragment 3</string>
+</resources>
