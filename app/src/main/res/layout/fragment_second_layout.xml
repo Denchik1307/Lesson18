@@ -11,6 +11,7 @@
         android:layout_margin="20dp"
         android:background="@color/fragment_three_background"
         android:text="@string/main_tool_bar2"
+        android:gravity="center"
         android:textColor="@color/fragment_three_text"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"

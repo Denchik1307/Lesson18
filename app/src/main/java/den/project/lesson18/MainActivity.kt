@@ -3,25 +3,23 @@ package den.project.lesson18
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import den.project.lesson18.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
     private var countFragment = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
     }
 
     override fun onStart() {
         super.onStart()
-        binding.button.setOnClickListener {
+        button.setOnClickListener {
             when (countFragment) {
-                0 -> openFragment(FirstFragment())
-                1 -> openFragment(SecondFragment())
-                2 -> openFragment(ThreeFragment())
+                0 -> openFragment(FirstFragment.newInstance())
+                1 -> openFragment(SecondFragment.newInstance())
+                2 -> openFragment(ThreeFragment.newInstance())
             }
             countFragment++
             if (countFragment > 2) countFragment = 0

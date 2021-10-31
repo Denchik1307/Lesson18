@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Урок 18</string>
     <string name="button_change_fragment">нажми меня</string>
-    <string name="main_tool_bar">Фрагмент 1</string>
+    <string name="main_tool_bar1">Фрагмент 1</string>
     <string name="main_tool_bar2">Фрагмент 2</string>
     <string name="main_tool_bar3">Фрагмент 3</string>
     <string name="main_fragment_text">ФРАГМЕНТ</string>
