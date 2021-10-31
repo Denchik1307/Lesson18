@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             when (countFragment) {
                 0 -> openFragment(FirstFragment.newInstance())
                 1 -> openFragment(SecondFragment.newInstance())
-                2 -> openFragment(ThreeFragment.newInstance())
+                2 -> openFragment(ThirdFragment.newInstance())
             }
             countFragment++
             if (countFragment > 2) countFragment = 0
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     private fun openFragment(fragment: Fragment) {
         supportFragmentManager
             .beginTransaction()
-//            .addToBackStack(fragment.tag)
+            .addToBackStack(fragment.tag)
             .replace(R.id.fvFragmentConteiner, fragment)
             .commit()
     }
