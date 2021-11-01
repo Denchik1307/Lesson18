@@ -16,21 +16,25 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         button.setOnClickListener {
-            when (countFragment) {
-                0 -> openFragment(FirstFragment.newInstance())
-                1 -> openFragment(SecondFragment.newInstance())
-                2 -> openFragment(ThirdFragment.newInstance())
-            }
-            countFragment++
-            if (countFragment > 2) countFragment = 0
+            pushMeButton()
         }
     }
 
-    private fun openFragment(fragment: Fragment) {
+    private fun openFragment(fragment: Fragment, myTag: String) {
         supportFragmentManager
             .beginTransaction()
-            .addToBackStack(fragment.tag)
+            .addToBackStack(myTag)
             .replace(R.id.fvFragmentConteiner, fragment)
             .commit()
+    }
+
+    fun pushMeButton() {
+        when (countFragment) {
+            0 -> openFragment(FirstFragment.newInstance(), FirstFragment.TAG)
+            1 -> openFragment(SecondFragment.newInstance(), SecondFragment.TAG)
+            2 -> openFragment(ThirdFragment.newInstance(), ThirdFragment.TAG)
+        }
+        countFragment++
+        if (countFragment > 2) countFragment = 0
     }
 }

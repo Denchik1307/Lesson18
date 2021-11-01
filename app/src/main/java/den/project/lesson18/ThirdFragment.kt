@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 class ThirdFragment : Fragment() {
 
     companion object {
-//        const val TAG = "den.project.lesson18.Three_Fragment"
+        const val TAG = "den.project.lesson18.Three_Fragment"
 
         fun newInstance() = ThirdFragment()
     }
